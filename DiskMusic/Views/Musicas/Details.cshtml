@@ -1,0 +1,30 @@
+﻿@model DiskMusic.ViewModel.DetailsViewModel
+
+@{
+    ViewData["Title"] = "Detalhes";
+}
+
+<h1>Detalhes</h1>
+
+<div>
+    <h4>Musica</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MusicaNome)
+        </dt>
+        <dt class="col-sm-10">
+            @Html.DisplayNameFor(model => model.AlbumNome)
+        </dt>
+        <dd class="col-sm-2">
+            @Html.DisplayFor(model => model.MusicaNome)
+        </dd>
+        <dd class="col-sm-2">
+            @Html.DisplayFor(model => model.AlbumNome)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.MusicaId">Editar</a> |
+    <a asp-action="Index">Voltar</a>
+</div>
